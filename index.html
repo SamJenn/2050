@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - 2050-7</title>
+  
+  
+  
+  
+<style>
+body {
+  background-color: lightgrey;
+background-image:
+  url("https://png.pngtree.com/thumb_back/fh260/background/20190216/pngtree-blue-knowledge-structure-background-image_3116.jpg")
+}
+
+
+.correct {
+  background: green;
+}
+
+.incorrect{
+  background: red;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <img src="https://www.valuematch.net/VMdata/VMimages/Icons/illustratie-home-test.png" alt="Knowledge Image"
+
+<p style="color:yellow"> <h1> <p style="color:yellow"> Sam Knowledge Quiz</h1>
+<ol>
+  <li><p style="color:yellow">2 + 2 = <input  data-correct="4"/></li>
+  <li><p style="color:yellow">6 / 3 <input  data-correct="2"/></li>
+  <li><p style="color:yellow"> What is the square root of 16? <input data-correct="4"/></li>
+    <li><p style="color:yellow">Who is the President? <input data-correct="Trump"/></li>
+  <li><p style="color:yellow">How old was Albert Einsten when he died? <input data-correct= "76" /></li>
+  <li><p style="color:yellow">What was Stephen Hawkings iq? <input data-correct= "160" /></li>
+  <li> <p style="color:yellow">5 x 5 <input data-correct="25"/></li>
+  <li> <p style="color:yellow">How tall was the tallest person on earth? <input data-correct= "8 foot 11 inches" /></li>
+  <li> <p style="color:yellow">What do you do at a red light? <input data-correct= "stop" /></li>
+  <li> <p style="color:yellow">Who was our first president? <input data-correct= "George Washington" /></li>
+
+ 
+    
+</ol>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  
+      <script id="rendered-js" >
+console.clear();
+
+$("input").change(onChange)
+
+function onChange(evt){
+  let correct = $(this).data("correct");
+  let response = $(this).val();
+  correct = correct.toUpperCase();
+  response = response.toUpperCase();
+
+  console.log(correct,response);
+  if(correct == response){
+   $(this).removeClass('incorrect').addClass('correct');
+  } else{
+    $(this).removeClass('correct').addClass('incorrect');
+  }
+}
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
